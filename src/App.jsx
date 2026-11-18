@@ -20,7 +20,7 @@ function App() {
   const [isLoading,setLoading]=useState(true)
   setTimeout(()=>{
     setLoading(false)
-  },3000)
+  },1000)
 
   return (
     <>
@@ -31,7 +31,7 @@ function App() {
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/view' element={<View/>}/>
       <Route path='/login' element={<Auth/>}/>
-      <Route path='/register' element={<Auth/>}/>
+      <Route path='/register' element={<Auth insideRegister />}/>
 
       <Route path='/admin' element={<AdminDashboard/>}/>
       <Route path='/admin/resource' element={<AdminResource/>}/>
