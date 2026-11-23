@@ -28,7 +28,7 @@ function App() {
       <Route path='/' element={isLoading?<PreLoader/>:<Home/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/books' element={<Books/>}/>
-      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/profile/:id' element={<Profile/>}/>
       <Route path='/view' element={<View/>}/>
       <Route path='/login' element={<Auth/>}/>
       <Route path='/register' element={<Auth insideRegister />}/>
