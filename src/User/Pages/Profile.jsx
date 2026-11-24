@@ -3,6 +3,9 @@ import Header from '../Components/Header'
 import Footer from '../../Components/Footer'
 import { FaCircleCheck } from 'react-icons/fa6'
 import Edit from '../Components/Edit'
+import UploadBooks from '../Components/UploadBooks'
+import UploadStatus from '../Components/UploadStatus'
+import PurchaseHistory from '../Components/PurchaseHistory'
 
 function Profile() {
   const [currentTab,setCurrentTab]= useState(1)
@@ -16,12 +19,12 @@ function Profile() {
             <img style={{height:"230px",width:"230px",borderRadius:"50%",padding:"15px"}} src="https://img.freepik.com/premium-photo/happy-man-ai-generated-portrait-user-profile_1119669-1.jpg" alt="person" />
           </div>
         {/* Username and edit option */}
-          <div className='flex justify-between px-20'>
+          <div className='grid md:flex justify-between px-20 items-center '>
           <div className='flex items-center '>
             <h1 className='font-bold md:text-3xl text-2xl'>User Name</h1>
-            <FaCircleCheck className='text-blue-500 ms-3'/>
+            <FaCircleCheck className='text-blue-500 md:ms-3 ms-1'/>
           </div>
-          <div className='font-bold'>
+          <div className='font-bold '>
             <Edit/>
           </div>
           </div>
@@ -37,9 +40,9 @@ function Profile() {
               <p onClick={()=>(setCurrentTab(2))} className={currentTab==2?'p-4 border-gray-200 border-t-2 border-r-2 border-l-2 rounded cursor-pointer ':'p-4 border-gray-200 border-b-2 rounded cursor-pointer '}>Upload Book Status</p>
               <p onClick={()=>(setCurrentTab(3))} className={currentTab==3?'p-4 border-gray-200 border-t-2 border-l-2 rounded cursor-pointer ':'p-4 border-gray-200 border-b-2 rounded cursor-pointer '}>Purchase History</p>
             </div> 
-            {currentTab==1&&<p>Upload Books</p>}
-            {currentTab==2&&<p>Upload Book Status</p>}
-            {currentTab==3&&<p>Purchase History</p>}
+            {currentTab==1&&<UploadBooks/>}
+            {currentTab==2&&<UploadStatus/>}
+            {currentTab==3&&<PurchaseHistory/>}
       <Footer/>
     </>
   )
