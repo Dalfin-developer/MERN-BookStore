@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function PageNotFound() {
   return (
     <div className='min-h-screen flex justify-center items-center flex-col'>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLrh_wsKk-Us0NMzXVgXZK3D4mI6goQNKvovKsWhm7nQ&s=10" alt="" />
+      <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWhvMDRxbXJ4YmkzaXU5bmZmZXJjb21leWliaGFua2Vldm41YjhjYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/vXCu2qPv6TmsSwrjCr/200.webp" alt="" />
       <h1 className='text-xl my-3'>Oh No!</h1>
       <h2 className='text-2xl font-bold'>Look Like You Are Lost</h2>
       <p className='my-3'>The Pages you are looking for is not available</p>
